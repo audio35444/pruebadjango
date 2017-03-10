@@ -4,5 +4,4 @@ from .models import Post
 
 def post_list(request):
 	qs_post = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-	cant = xrange(len(qs_post))
-	return render(request,'blog\post_list.html', {'qs_post':qs_post,'cant':cant})
+	return render(request,'blog\post_list.html', {'qs_post':qs_post})
