@@ -5,6 +5,10 @@
         <body>
             <div>
                 <h1><a href="">Django Project1</a></h1>
+                {%for item1,item2 in qs_post,cant%}
+                Post:{{item1}}{{item2}}
+                <br>
+                {%endfor%}
             </div>
 
             <div>
